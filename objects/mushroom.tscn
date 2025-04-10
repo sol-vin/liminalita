@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://bo7yp12s3cxoi"]
+
+[ext_resource type="ArrayMesh" uid="uid://bosnfbuliaeu0" path="res://models/mushroom.mesh" id="1_bmakt"]
+
+[node name="Mushroom" type="MeshInstance3D"]
+mesh = ExtResource("1_bmakt")
+skeleton = NodePath("../..")

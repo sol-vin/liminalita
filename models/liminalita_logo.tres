@@ -1,0 +1,11 @@
+[gd_resource type="TextMesh" load_steps=3 format=3 uid="uid://bvvxwgl1ya7vi"]
+
+[ext_resource type="FontFile" uid="uid://cy1551lnk6crc" path="res://fonts/font.otf" id="1_x00uf"]
+[ext_resource type="Material" uid="uid://cqhvyan7vcto7" path="res://textures/white.tres" id="2_x00uf"]
+
+[resource]
+material = ExtResource("2_x00uf")
+text = "LIMINALITA"
+font = ExtResource("1_x00uf")
+font_size = 127
+depth = 1.114

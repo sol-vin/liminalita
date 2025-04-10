@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://bl6dff0re6tyv"]
+
+[ext_resource type="Script" uid="uid://bvuojcn3t1dfj" path="res://objects/rectangle_frame.gd" id="1_6uqi0"]
+[ext_resource type="PackedScene" uid="uid://cu4ub0uvh0vqr" path="res://proc_art/test.tscn" id="2_ppyta"]
+[ext_resource type="Material" uid="uid://bpn5dc381rf0c" path="res://textures/grey.tres" id="3_ykrsh"]
+
+[node name="entity_1_frame_rectangle" type="Node3D" node_paths=PackedStringArray("frame_mesh", "screen_mesh", "scene_container", "scene", "occluder")]
+transform = Transform3D(1.19249e-08, 0, -1, 0, 1, 0, 1, 0, 1.19249e-08, 0, 0, 0)
+script = ExtResource("1_6uqi0")
+body_size = Vector3(2, 8.5, 0.25001)
+packed_scene = ExtResource("2_ppyta")
+material = ExtResource("3_ykrsh")
+frame_mesh = NodePath("Frame Mesh")
+screen_mesh = NodePath("Screen Mesh")
+scene_container = NodePath("Scene")
+scene = NodePath("Scene/Proc Art")
+occluder = NodePath("Occluder")
+metadata/func_godot_mesh_data = {}

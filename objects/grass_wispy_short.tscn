@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://buet7f8vaclmx"]
+
+[ext_resource type="ArrayMesh" uid="uid://cdr8s73lafod0" path="res://models/gress.mesh" id="1_akdph"]
+
+[node name="Grass_Wispy_Short30" type="MeshInstance3D"]
+transform = Transform3D(0.00699001, 0.167318, -1.32446, 0, 1.32447, 0.16732, 1.33498, -0.000876081, 0.00693489, 0, 0, 0)
+mesh = ExtResource("1_akdph")
+skeleton = NodePath("")

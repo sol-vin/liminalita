@@ -1,0 +1,32 @@
+[gd_scene load_steps=5 format=3 uid="uid://67i4ssk20rjk"]
+
+[ext_resource type="Material" uid="uid://c6ij1ln0vfh85" path="res://textures/black.tres" id="1_cb3hu"]
+[ext_resource type="Script" path="res://objects/placard.gd" id="2_0mmvv"]
+[ext_resource type="FontFile" uid="uid://cy1551lnk6crc" path="res://fonts/font.otf" id="3_4lrjn"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_6ux1f"]
+material = ExtResource("1_cb3hu")
+size = Vector3(0.02, 0.2, 0.4)
+
+[node name="Placard" type="MeshInstance3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.366814, 0)
+mesh = SubResource("BoxMesh_6ux1f")
+skeleton = NodePath("")
+script = ExtResource("2_0mmvv")
+
+[node name="Title" type="Label3D" parent="."]
+transform = Transform3D(-4.37114e-09, 0, -0.1, 0, 0.1, 0, 0.1, 0, -4.37114e-09, -0.0124366, 0.0827055, 0)
+text = "An eloquent example
+"
+font = ExtResource("3_4lrjn")
+font_size = 64
+outline_size = 0
+width = 100.0
+
+[node name="Description" type="Label3D" parent="."]
+transform = Transform3D(-4.37114e-09, 0, -0.1, 0, 0.1, 0, 0.1, 0, -4.37114e-09, -0.0114232, -0.00910282, 0.00226784)
+text = "A description of sorts this text tells you things about this painting, maybe some shit about the title or whatever and it will make you feel like this art might actually mean something but it doesnt you are a rube, a fool, and an idiot. art is meaningless."
+font = ExtResource("3_4lrjn")
+outline_size = 0
+autowrap_mode = 2
+width = 700.0

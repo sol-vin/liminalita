@@ -1,0 +1,14 @@
+[remap]
+
+importer="func_godot.map"
+type="Resource"
+uid="uid://dbbkkyeiejq80"
+path="res://godot/imported/lobby-inner-circle.map-7e820654a5d709b6b81433b77bad6a85.tres"
+
+[deps]
+
+source_file="res://maps/lobby-inner-circle.map"
+dest_files=["res://godot/imported/lobby-inner-circle.map-7e820654a5d709b6b81433b77bad6a85.tres"]
+
+[params]
+

@@ -1,0 +1,112 @@
+[gd_scene load_steps=2 format=3 uid="uid://cu4ub0uvh0vqr"]
+
+[sub_resource type="GDScript" id="GDScript_rr43t"]
+script/source = "@tool
+extends Control
+@export var seed := false
+@export var seed_value := 0
+
+var COLORS = {
+	\"carrot\": [
+		Color.from_rgba8(249, 160, 63),
+		Color.from_rgba8(247, 212, 136),
+		Color.from_rgba8(234, 239, 177),
+		Color.from_rgba8(233, 247, 202),
+		Color.from_rgba8(206, 181, 167)
+		
+	],
+	
+	\"romantic\": [
+		Color.from_rgba8(14, 0, 4),
+		Color.from_rgba8(49, 8, 31),
+		Color.from_rgba8(107, 15, 26),
+		Color.from_rgba8(185, 19, 114),
+		Color.from_rgba8(250, 25, 139)
+		
+	],
+	\"new\": [
+		Color(\"ED6A5A\"),
+		Color(\"F4F1BB\"),
+		Color(\"9BC1BC\"),
+		Color(\"5D576B\"),
+		Color(\"E6EBE0\"),
+	],
+	
+	\"purple_sand\": [
+		Color(\"E8D6CB\"),
+		Color(\"D0ADA7\"),
+		Color(\"AD6A6C\"),
+		Color(\"5D2E46\"),
+		Color(\"B58DB6\"),
+	],
+	
+	\"lemon_lime\": [
+		Color(\"F1F7EE\"),
+		Color(\"B0BEA9\"),
+		Color(\"92AA83\"),
+		Color(\"E0EDC5\"),
+		Color(\"E7F59E\"),
+	]
+}
+
+@export var inner_percent = 0.5
+
+func _draw() -> void:
+	var rng = RandomNumberGenerator.new()
+	if seed:
+		rng.seed = seed_value
+	var num_of_squares = rng.randi_range(8, 16)
+	var size_x = get_viewport().size.x/num_of_squares
+	var total_y = get_viewport().size.y/size_x
+	var size = Vector2i(size_x, size_x)
+	var offset = (get_viewport().size - Vector2i(size_x * num_of_squares, size_x * total_y))/2
+	var random_key = COLORS.keys()[rng.randi() % COLORS.size()]
+	for x in num_of_squares:
+		for y in total_y:
+
+			var colors : Array = COLORS[random_key].duplicate()
+			var c1_index = rng.randi_range(0, colors.size()-1)
+			var color1 = colors[c1_index]
+			colors.erase(color1)
+			var c2_index = rng.randi_range(0, colors.size()-1)
+			var color2 = colors[c2_index]
+			
+			var rx = offset.x + size.x * x
+			var ry = offset.y + size.y * y 
+			var rect = Rect2(Vector2i(rx, ry), size)
+			draw_rect(rect, color1)
+			
+			var isize = size * inner_percent
+			rect = Rect2(Vector2i(rx, ry) + (size-Vector2i(isize))/2, isize)
+			draw_rect(rect, color2)
+"
+
+[node name="Test" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Mask" type="TextureRect" parent="."]
+clip_children = 1
+light_mask = 0
+clip_contents = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+expand_mode = 2
+
+[node name="Screen" type="Control" parent="Mask"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = SubResource("GDScript_rr43t")

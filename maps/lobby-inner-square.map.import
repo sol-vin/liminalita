@@ -1,0 +1,14 @@
+[remap]
+
+importer="func_godot.map"
+type="Resource"
+uid="uid://dqttkj5ojpxr7"
+path="res://godot/imported/lobby-inner-square.map-791be094ac913ee91e3962bc1b90a673.tres"
+
+[deps]
+
+source_file="res://maps/lobby-inner-square.map"
+dest_files=["res://godot/imported/lobby-inner-square.map-791be094ac913ee91e3962bc1b90a673.tres"]
+
+[params]
+

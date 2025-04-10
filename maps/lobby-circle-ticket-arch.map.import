@@ -1,0 +1,14 @@
+[remap]
+
+importer="func_godot.map"
+type="Resource"
+uid="uid://cg5jwa4jnplfd"
+path="res://godot/imported/lobby-circle-ticket-arch.map-530455483737a11810d534ac5510af2f.tres"
+
+[deps]
+
+source_file="res://maps/lobby-circle-ticket-arch.map"
+dest_files=["res://godot/imported/lobby-circle-ticket-arch.map-530455483737a11810d534ac5510af2f.tres"]
+
+[params]
+

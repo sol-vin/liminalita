@@ -1,0 +1,26 @@
+[gd_resource type="ShaderMaterial" load_steps=4 format=3 uid="uid://chvjg807daroq"]
+
+[ext_resource type="Shader" uid="uid://bytnkuyrmylvh" path="res://textures/outline.gdshader" id="1_3ejsk"]
+[ext_resource type="Shader" uid="uid://bvjkucko3lath" path="res://textures/vertex_colors.gdshader" id="2_18cn0"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_o717w"]
+render_priority = 0
+shader = ExtResource("1_3ejsk")
+shader_parameter/on = true
+shader_parameter/color_threshold = 0.001
+shader_parameter/outline_color = Color(0, 0, 0, 1)
+shader_parameter/color_polygons = true
+shader_parameter/polygon_color = Color(1, 1, 1, 1)
+shader_parameter/outline_thickness = 0.5
+shader_parameter/edge_blur = 1.0
+shader_parameter/exact_color_match = false
+shader_parameter/remove_isolated_pixels = true
+shader_parameter/min_connected_edges = 3
+shader_parameter/normal_texture_mix = 0.1
+shader_parameter/isolated_normal_texture_mix = 0.51
+
+[resource]
+render_priority = 0
+next_pass = SubResource("ShaderMaterial_o717w")
+shader = ExtResource("2_18cn0")
+shader_parameter/on = true

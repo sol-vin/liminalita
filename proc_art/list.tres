@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="ProcArt" load_steps=6 format=3 uid="uid://cni602oj6mu5a"]
+
+[ext_resource type="PackedScene" uid="uid://cu4ub0uvh0vqr" path="res://proc_art/test.tscn" id="1_frea3"]
+[ext_resource type="Script" uid="uid://cgdx3tjf3slu1" path="res://resources/proc_art_list.gd" id="1_vq3iq"]
+[ext_resource type="PackedScene" uid="uid://cagqdywksiii1" path="res://proc_art/basic_color.tscn" id="2_d5p6l"]
+[ext_resource type="PackedScene" uid="uid://cljndjgram8g1" path="res://proc_art/lines.tscn" id="3_d5p6l"]
+[ext_resource type="PackedScene" uid="uid://jb7q24oobteo" path="res://proc_art/color_mixing.tscn" id="4_jvx3w"]
+
+[resource]
+script = ExtResource("1_vq3iq")
+list = Dictionary[String, PackedScene]({
+"basic_color": ExtResource("2_d5p6l"),
+"color_mixing": ExtResource("4_jvx3w"),
+"lines": ExtResource("3_d5p6l"),
+"test": ExtResource("1_frea3")
+})
+metadata/_custom_type_script = "uid://cgdx3tjf3slu1"

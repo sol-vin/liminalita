@@ -1,0 +1,137 @@
+@BaseClass color(204 204 204) size(-8.0 -8.0 -8.0, 8.0 8.0 8.0) = Phong
+[
+	_phong(choices) : "Phong shading" : 0 = 
+	[
+		0 : "Disabled"
+		1 : "Smooth shading"
+	]
+	_phong_angle(float) : "Phong smoothing angle" : "89.0"
+]
+
+@SolidClass color(204 204 204) = worldspawn : "Default static world geometry. Builds a StaticBody3D with a single MeshInstance3D and a single convex CollisionShape3D shape. Also builds Occluder3D to aid in render culling of other VisualInstance3D nodes." []
+
+@SolidClass color(204 204 204) base(Phong) = func_geo : "Static collidable geometry. Builds a StaticBody3D with a MeshInstance3D, a single concave CollisionShape3D, and an OccluderInstance3D." []
+
+@SolidClass color(204 204 204) base(Phong) = func_detail : "Static collidable geometry. Builds a StaticBody3D with a MeshInstance3D and a single concave CollisionShape3D. Does not occlude other VisualInstance3D nodes." []
+
+@SolidClass color(204 204 204) base(Phong) = func_detail_illusionary : "Static geometry with no collision. Builds a Node3D with a MeshInstance3D. Does not occlude other VisualInstance3D nodes." []
+
+@SolidClass color(204 204 204) base(Phong) = func_illusionary : "Static geometry with no collision. Builds a Node3D with a MeshInstance3D and an Occluder3D to aid in render culling of other VisualInstance3D nodes." []
+
+@SolidClass color(204 204 204) = func_marker : "A marker" []
+
+@PointClass color(204 0 204) size(-8.0 -8.0 -16.0, 16.0 16.0 32.0) = player : "A player" []
+
+@SolidClass color(204 204 204) = bench : "A bench the user can sit on." []
+
+@SolidClass color(204 204 204) = circle_ticket_arch : "The ticket arch for the circle side" []
+
+@SolidClass color(204 204 204) = square_ticket_arch : "The ticket arch for the square side`" []
+
+@PointClass color(204 0 204) size(-4.0 -4.0 -4.0, 8.0 8.0 8.0) = purelight : "A pure light
+" 
+[
+	attenuation(float) : "" : "0.0"
+	color(float) : "" : "0.5"
+	color_is_black(choices) : "" = 
+	[
+		0 : "No"
+		1 : "Yes"
+	]
+	color_is_white(choices) : "" = 
+	[
+		0 : "No"
+		1 : "Yes"
+	]
+	energy(float) : "" : "0.5"
+	range(float) : "" : "10.0"
+]
+
+@SolidClass color(204 204 204) = light_block : "Blocks light" []
+
+@SolidClass color(204 204 204) = reference_brush : "A reference brush used for some sort of positioning" []
+
+@PointClass color(204 0 204) size(-4.0 -4.0 -4.0, 8.0 8.0 8.0) = reference_point : "A reference point used for positionign or whatever
+" 
+[
+	attenuation(float) : "" : "0.0"
+	color(float) : "" : "0.5"
+	color_is_black(choices) : "" = 
+	[
+		0 : "No"
+		1 : "Yes"
+	]
+	color_is_white(choices) : "" = 
+	[
+		0 : "No"
+		1 : "Yes"
+	]
+	energy(float) : "" : "0.5"
+	range(float) : "" : "10.0"
+]
+
+@SolidClass color(204 204 204) = frame_rectangle : "frame_rectangle" 
+[
+	linked_to(string) : "" : ""
+	lip_size(float) : "" : "0.1"
+	packed_scene(string) : "" : "test"
+	screen_meter_to_pixel(string) : "" : "128 128"
+	screen_scale(string) : "" : "1.0 1.0"
+	seed(choices) : "" = 
+	[
+		0 : "No"
+		1 : "Yes"
+	]
+	seed_value(integer) : "" : 0
+	uuid(string) : "" : ""
+	z_depth(float) : "" : "0.5"
+	flip_screen_v(choices) : "" = 
+	[
+		0 : "No"
+		1 : "Yes"
+	]
+]
+
+@SolidClass color(204 204 204) = frame_circle : "frame_circle" 
+[
+	linked_to(string) : "" : ""
+	lip_size(float) : "" : "0.1"
+	packed_scene(string) : "" : "test"
+	screen_meter_to_pixel(string) : "" : "128 128"
+	screen_scale(string) : "" : "1.0 1.0"
+	seed(choices) : "" = 
+	[
+		0 : "No"
+		1 : "Yes"
+	]
+	seed_value(integer) : "" : 0
+	z_depth(float) : "" : "0.5"
+	flip_screen_v(choices) : "" = 
+	[
+		0 : "No"
+		1 : "Yes"
+	]
+]
+
+@SolidClass color(204 204 204) = func_no_light : "Worldspawn but no light" []
+
+@SolidClass color(204 204 204) = func_no_shadows : "Worldspawn gets lights but no shadows" []
+
+@PointClass color(204 0 204) size(-4.0 -4.0 -4.0, 8.0 8.0 8.0) = model_wall_light : "
+" 
+[
+	attenuation(float) : "" : "0.0"
+	color(float) : "" : "0.5"
+	color_is_black(choices) : "" = 
+	[
+		0 : "No"
+		1 : "Yes"
+	]
+	color_is_white(choices) : "" = 
+	[
+		0 : "No"
+		1 : "Yes"
+	]
+	energy(float) : "" : "0.5"
+	range(float) : "" : "10.0"
+]

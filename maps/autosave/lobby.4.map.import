@@ -1,0 +1,14 @@
+[remap]
+
+importer="func_godot.map"
+type="Resource"
+uid="uid://brdv3yaue12r"
+path="res://godot/imported/lobby.4.map-472365629bfd00a1fb215db599a70d6e.tres"
+
+[deps]
+
+source_file="res://maps/autosave/lobby.4.map"
+dest_files=["res://godot/imported/lobby.4.map-472365629bfd00a1fb215db599a70d6e.tres"]
+
+[params]
+

@@ -1,0 +1,47 @@
+[gd_resource type="Resource" script_class="FuncGodotFGDSolidClass" load_steps=2 format=3 uid="uid://b28v6rd4elvxg"]
+
+[ext_resource type="Script" uid="uid://qgs38jl8667u" path="res://addons/func_godot/src/fgd/func_godot_fgd_solid_class.gd" id="1_qv2wq"]
+
+[resource]
+script = ExtResource("1_qv2wq")
+spawn_type = 2
+origin_type = 4
+build_visuals = true
+use_in_baked_light = false
+shadow_casting_setting = 0
+build_occlusion = false
+render_layers = 0
+collision_shape_type = 0
+collision_layer = 1
+collision_mask = 1
+collision_priority = 1.0
+collision_shape_margin = 0.04
+add_textures_metadata = false
+add_vertex_metadata = false
+add_face_position_metadata = false
+add_face_normal_metadata = false
+add_collision_shape_face_range_metadata = false
+classname = "frame_circle"
+description = ""
+func_godot_internal = false
+base_classes = Array[Resource]([])
+class_properties = {
+"flip_screen_v": false,
+"linked_to": "",
+"lip_size": 0.1,
+"packed_scene": "test",
+"screen_meter_to_pixel": Vector2i(128, 128),
+"screen_scale": Vector2(1, 1),
+"seed": false,
+"seed_value": 0,
+"z_depth": 0.5
+}
+class_property_descriptions = {}
+auto_apply_to_matching_node_properties = false
+meta_properties = {
+"color": Color(0.8, 0.8, 0.8, 1),
+"size": AABB(-8, -8, -8, 8, 8, 8)
+}
+node_class = "CircleFrame"
+name_property = ""
+metadata/_custom_type_script = "uid://qgs38jl8667u"

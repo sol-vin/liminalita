@@ -1,0 +1,1 @@
+class_name WorldSpawn extends StaticBody3D

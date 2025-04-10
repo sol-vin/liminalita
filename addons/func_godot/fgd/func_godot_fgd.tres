@@ -1,0 +1,31 @@
+[gd_resource type="Resource" script_class="FuncGodotFGDFile" load_steps=22 format=3 uid="uid://crgpdahjaj"]
+
+[ext_resource type="Script" uid="uid://bfkk28sbuibjh" path="res://addons/func_godot/src/fgd/func_godot_fgd_file.gd" id="1_axt3h"]
+[ext_resource type="Resource" uid="uid://nayxb8n7see2" path="res://addons/func_godot/fgd/phong_base.tres" id="1_ehab8"]
+[ext_resource type="Resource" uid="uid://bdji3873bg32h" path="res://addons/func_godot/fgd/worldspawn.tres" id="2_ri2rx"]
+[ext_resource type="Resource" uid="uid://b70vf4t5dc70t" path="res://addons/func_godot/fgd/func_geo.tres" id="3_7jigp"]
+[ext_resource type="Resource" uid="uid://cxy7jnh6d7msn" path="res://addons/func_godot/fgd/func_detail.tres" id="3_fqfww"]
+[ext_resource type="Resource" uid="uid://dg5x44cc7flew" path="res://addons/func_godot/fgd/func_illusionary.tres" id="4_c4ucw"]
+[ext_resource type="Resource" uid="uid://ch3e0dix85uhb" path="res://addons/func_godot/fgd/func_detail_illusionary.tres" id="5_b2q3p"]
+[ext_resource type="Resource" uid="uid://3luri56747av" path="res://addons/func_godot/fgd/player.tres" id="7_h5cmk"]
+[ext_resource type="Resource" uid="uid://db451201caict" path="res://addons/func_godot/fgd/func_marker.tres" id="8_ohl22"]
+[ext_resource type="Resource" uid="uid://dqb8lh642thuf" path="res://addons/func_godot/fgd/bench.tres" id="9_ohl22"]
+[ext_resource type="Resource" uid="uid://bh1fveltjxsk7" path="res://addons/func_godot/fgd/circle_ticket_arch.tres" id="10_7vn57"]
+[ext_resource type="Resource" uid="uid://7i0qa8hmu62y" path="res://addons/func_godot/fgd/square_ticket_arch.tres" id="11_8sdf2"]
+[ext_resource type="Resource" uid="uid://6htsj1dmhykb" path="res://addons/func_godot/fgd/pure_light.tres" id="12_l5gmx"]
+[ext_resource type="Resource" uid="uid://bd6da0hh6ho2s" path="res://addons/func_godot/fgd/light_block.tres" id="13_5i82v"]
+[ext_resource type="Resource" uid="uid://ixp2pi72cpbk" path="res://addons/func_godot/fgd/reference_brush.tres" id="14_2evh0"]
+[ext_resource type="Resource" uid="uid://cgpbhymbjpk6x" path="res://addons/func_godot/fgd/reference_point.tres" id="15_frtxl"]
+[ext_resource type="Resource" uid="uid://bel4c6dha6kgm" path="res://addons/func_godot/fgd/frame_rectangle.tres" id="16_frtxl"]
+[ext_resource type="Resource" uid="uid://b28v6rd4elvxg" path="res://addons/func_godot/fgd/frame_circle.tres" id="17_ol6o7"]
+[ext_resource type="Resource" uid="uid://c3t4o7jl478fs" path="res://addons/func_godot/fgd/func_no_light.tres" id="18_kus1h"]
+[ext_resource type="Resource" uid="uid://bfk4gf8n3de4d" path="res://addons/func_godot/fgd/func_no_shadows.tres" id="19_tv1il"]
+[ext_resource type="Resource" uid="uid://ck1v4erej6jhl" path="res://addons/func_godot/fgd/wall_light.tres" id="20_hq683"]
+
+[resource]
+script = ExtResource("1_axt3h")
+export_file = false
+target_map_editor = 1
+fgd_name = "FuncGodot"
+base_fgd_files = Array[Resource]([])
+entity_definitions = Array[Resource]([ExtResource("1_ehab8"), ExtResource("2_ri2rx"), ExtResource("3_7jigp"), ExtResource("3_fqfww"), ExtResource("5_b2q3p"), ExtResource("4_c4ucw"), ExtResource("8_ohl22"), ExtResource("7_h5cmk"), ExtResource("9_ohl22"), ExtResource("10_7vn57"), ExtResource("11_8sdf2"), ExtResource("12_l5gmx"), ExtResource("13_5i82v"), ExtResource("14_2evh0"), ExtResource("15_frtxl"), ExtResource("16_frtxl"), ExtResource("17_ol6o7"), ExtResource("18_kus1h"), ExtResource("19_tv1il"), ExtResource("20_hq683")])

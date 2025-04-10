@@ -1,0 +1,185 @@
+[gd_scene load_steps=19 format=3 uid="uid://clrgrcixd4w8"]
+
+[ext_resource type="Script" uid="uid://cfnxwjwyawgvv" path="res://objects/back_hall_statue.gd" id="1_wnfve"]
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_8ctet"]
+animation = &"1"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_raxrp"]
+animation = &"2"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_5yb1w"]
+animation = &"3"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_d5anq"]
+animation = &"4"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_bjqmt"]
+switch_mode = 2
+advance_mode = 2
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_aivol"]
+switch_mode = 2
+advance_mode = 2
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_uhqxc"]
+switch_mode = 2
+advance_mode = 2
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_g7vfh"]
+switch_mode = 2
+advance_mode = 2
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_2vy0l"]
+switch_mode = 2
+
+[sub_resource type="AnimationNodeStateMachine" id="AnimationNodeStateMachine_ut6m4"]
+states/1/node = SubResource("AnimationNodeAnimation_8ctet")
+states/1/position = Vector2(317, 119)
+states/2/node = SubResource("AnimationNodeAnimation_raxrp")
+states/2/position = Vector2(425, 119)
+states/3/node = SubResource("AnimationNodeAnimation_5yb1w")
+states/3/position = Vector2(528, 124)
+states/4/node = SubResource("AnimationNodeAnimation_d5anq")
+states/4/position = Vector2(707, 134)
+states/Start/position = Vector2(167, 100)
+transitions = ["Start", "1", SubResource("AnimationNodeStateMachineTransition_bjqmt"), "1", "2", SubResource("AnimationNodeStateMachineTransition_aivol"), "2", "3", SubResource("AnimationNodeStateMachineTransition_uhqxc"), "3", "4", SubResource("AnimationNodeStateMachineTransition_g7vfh"), "4", "End", SubResource("AnimationNodeStateMachineTransition_2vy0l")]
+
+[sub_resource type="Animation" id="Animation_2xjxn"]
+resource_name = "1"
+length = 0.001
+loop_mode = 1
+tracks/0/type = "method"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("..")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"change_to_one"
+}]
+}
+
+[sub_resource type="Animation" id="Animation_3efrf"]
+resource_name = "2"
+length = 0.001
+loop_mode = 1
+tracks/0/type = "method"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("..")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"change_to_two"
+}]
+}
+
+[sub_resource type="Animation" id="Animation_s2yhh"]
+resource_name = "3"
+length = 0.001
+loop_mode = 1
+tracks/0/type = "method"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("..")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"change_to_three"
+}]
+}
+
+[sub_resource type="Animation" id="Animation_428pv"]
+resource_name = "4"
+length = 0.001
+loop_mode = 1
+tracks/0/type = "method"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("..")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"change_to_four"
+}]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_ou5n5"]
+_data = {
+&"1": SubResource("Animation_2xjxn"),
+&"2": SubResource("Animation_3efrf"),
+&"3": SubResource("Animation_s2yhh"),
+&"4": SubResource("Animation_428pv")
+}
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_qhwo6"]
+size = Vector3(2.97332, 2.11865, 2.53188)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_fp4ko"]
+size = Vector3(1.25, 2, 1.25)
+
+[node name="Back Hall Statue" type="StaticBody3D"]
+script = ExtResource("1_wnfve")
+
+[node name="State" type="AnimationTree" parent="."]
+root_node = NodePath(".")
+tree_root = SubResource("AnimationNodeStateMachine_ut6m4")
+anim_player = NodePath("Player")
+
+[node name="Player" type="AnimationPlayer" parent="State"]
+libraries = {
+&"": SubResource("AnimationLibrary_ou5n5")
+}
+
+[node name="Trigger Area" type="Area3D" parent="."]
+collision_mask = 2
+
+[node name="Shape" type="CollisionShape3D" parent="Trigger Area"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.609821)
+shape = SubResource("BoxShape3D_qhwo6")
+
+[node name="Visibility Check" type="VisibleOnScreenNotifier3D" parent="."]
+
+[node name="Shape" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.241744, 0)
+shape = SubResource("BoxShape3D_fp4ko")
+
+[node name="1" type="Node3D" parent="."]
+transform = Transform3D(1.25, 0, 0, 0, 1.25, 0, 0, 0, 1.25, 0.0232129, 0.122454, 0)
+
+[node name="2" type="Node3D" parent="."]
+transform = Transform3D(1.25, 0, 0, 0, 1.25, 0, 0, 0, 1.25, 0.0232129, 0.122454, 0)
+visible = false
+
+[node name="3" type="Node3D" parent="."]
+transform = Transform3D(1.25, 0, 0, 0, 1.25, 0, 0, 0, 1.25, 0.0232129, 0.122454, 0)
+visible = false
+
+[node name="4" type="Node3D" parent="."]
+transform = Transform3D(1.25, 0, 0, 0, 1.25, 0, 0, 0, 1.25, 0.0232129, 0.122454, 0)
+visible = false
+
+[node name="Marker3D" type="Marker3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.120542, 0)
+
+[connection signal="body_entered" from="Trigger Area" to="." method="nearby" unbinds=1]
+[connection signal="body_exited" from="Trigger Area" to="." method="far_away" unbinds=1]
+[connection signal="screen_entered" from="Visibility Check" to="." method="on_screen"]
+[connection signal="screen_exited" from="Visibility Check" to="." method="off_screen"]

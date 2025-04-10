@@ -1,0 +1,38 @@
+[gd_scene load_steps=7 format=3 uid="uid://cxka74kc8ymy7"]
+
+[ext_resource type="Script" uid="uid://c5ynk43c4m62t" path="res://main.gd" id="1_efxa6"]
+[ext_resource type="PackedScene" uid="uid://0yb7kh0wmw7p" path="res://maps/lobby_main.tscn" id="3_h2yge"]
+[ext_resource type="AudioStream" uid="uid://cvqctc6rq4f83" path="res://music/chops/02-loop1.mp3" id="4_lquwl"]
+[ext_resource type="AudioStream" uid="uid://bs3ux7lexunlq" path="res://music/chops/02-loop2.mp3" id="5_7mycd"]
+[ext_resource type="Environment" uid="uid://dhptyfor421yu" path="res://objects/player_camera_environment.tres" id="11_074og"]
+
+[sub_resource type="AudioStreamInteractive" id="AudioStreamInteractive_272bh"]
+clip_count = 2
+clip_0/name = &"loop1"
+clip_0/stream = ExtResource("4_lquwl")
+clip_0/auto_advance = 0
+clip_1/name = &"loop2"
+clip_1/stream = ExtResource("5_7mycd")
+clip_1/auto_advance = 1
+clip_1/next_clip = 0
+_transitions = {
+Vector2i(-1, -1): {
+"fade_beats": 1.0,
+"fade_mode": 0,
+"from_time": 3,
+"to_time": 1
+}
+}
+
+[node name="Main" type="Node3D"]
+script = ExtResource("1_efxa6")
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = ExtResource("11_074og")
+
+[node name="Lobby" parent="." node_paths=PackedStringArray("audio_manager") instance=ExtResource("3_h2yge")]
+audio_manager = NodePath("../AudioStreamPlayer")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = SubResource("AudioStreamInteractive_272bh")
+autoplay = true

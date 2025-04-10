@@ -1,0 +1,100 @@
+[gd_scene load_steps=2 format=3 uid="uid://cljndjgram8g1"]
+
+[sub_resource type="GDScript" id="GDScript_rr43t"]
+script/source = "@tool
+extends Control
+@export var seed := false
+@export var seed_value := 0
+
+var COLORS = {
+	\"carrot\": [
+		Color.from_rgba8(249, 160, 63),
+		Color.from_rgba8(247, 212, 136),
+		Color.from_rgba8(234, 239, 177),
+		Color.from_rgba8(233, 247, 202),
+		Color.from_rgba8(206, 181, 167)
+		
+	],
+	
+	\"romantic\": [
+		Color.from_rgba8(14, 0, 4),
+		Color.from_rgba8(49, 8, 31),
+		Color.from_rgba8(107, 15, 26),
+		Color.from_rgba8(185, 19, 114),
+		Color.from_rgba8(250, 25, 139)
+		
+	],
+	\"new\": [
+		Color(\"ED6A5A\"),
+		Color(\"F4F1BB\"),
+		Color(\"9BC1BC\"),
+		Color(\"5D576B\"),
+		Color(\"E6EBE0\"),
+	],
+	
+	\"purple_sand\": [
+		Color(\"E8D6CB\"),
+		Color(\"D0ADA7\"),
+		Color(\"AD6A6C\"),
+		Color(\"5D2E46\"),
+		Color(\"B58DB6\"),
+	],
+	
+	\"lemon_lime\": [
+		Color(\"F1F7EE\"),
+		Color(\"B0BEA9\"),
+		Color(\"92AA83\"),
+		Color(\"E0EDC5\"),
+		Color(\"E7F59E\"),
+	]
+}
+
+var min_line_size = 0.3
+var max_line_size = 0.9
+var line_width = 2.0
+var total_lines = 40
+
+func _draw() -> void:
+	var rng = RandomNumberGenerator.new()
+	if seed:
+		rng.seed = seed_value
+	var size = get_viewport().size
+	draw_rect(Rect2(0, 0, size.x, size.y), Color.WHITE)
+	for line in total_lines:
+		var x = rng.randf() * size.x
+		var line_length = min_line_size + rng.randf() * (max_line_size-min_line_size)
+		var max_line_start = 1.0 - line_length
+		var y = size.y * rng.randf() * max_line_start
+		var p1 = Vector2(x, y)
+		var p2 = Vector2(x, y + size.y * line_length)
+		draw_line(p1, p2, Color.RED, line_width)
+		draw_circle(Vector2(x, y + size.y * line_length * 0.5), rng.randf() * 10, Color.RED)
+"
+
+[node name="Test" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Mask" type="TextureRect" parent="."]
+clip_children = 1
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+expand_mode = 2
+
+[node name="Screen" type="Control" parent="Mask"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = SubResource("GDScript_rr43t")

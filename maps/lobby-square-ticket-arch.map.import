@@ -1,0 +1,14 @@
+[remap]
+
+importer="func_godot.map"
+type="Resource"
+uid="uid://bvmgrnxroxfyd"
+path="res://godot/imported/lobby-square-ticket-arch.map-59b91b1b1ebf77933e30d1ee5e2b3f13.tres"
+
+[deps]
+
+source_file="res://maps/lobby-square-ticket-arch.map"
+dest_files=["res://godot/imported/lobby-square-ticket-arch.map-59b91b1b1ebf77933e30d1ee5e2b3f13.tres"]
+
+[params]
+
