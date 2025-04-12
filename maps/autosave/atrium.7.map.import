@@ -1,0 +1,14 @@
+[remap]
+
+importer="func_godot.map"
+type="Resource"
+uid="uid://wjfl7vf8mgon"
+path="res://godot/imported/atrium.7.map-4145b7318547c83023af7df59f0c1b5d.tres"
+
+[deps]
+
+source_file="res://maps/autosave/atrium.7.map"
+dest_files=["res://godot/imported/atrium.7.map-4145b7318547c83023af7df59f0c1b5d.tres"]
+
+[params]
+

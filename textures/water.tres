@@ -1,0 +1,45 @@
+[gd_resource type="ShaderMaterial" load_steps=2 format=3 uid="uid://bhnfv4mclvedh"]
+
+[sub_resource type="Shader" id="Shader_0vbwo"]
+code = "shader_type spatial;
+render_mode cull_disabled, fog_disabled, ambient_light_disabled;
+
+uniform vec3 polygon_color: source_color = vec3(1.0, 1.0, 1.0);
+
+vec2 random(vec2 uv){
+    uv = vec2( dot(uv, vec2(127.1,311.7) ),
+               dot(uv, vec2(269.5,183.3) ) );
+    return -1.0 + 2.0 * fract(sin(uv) * 43758.5453123);
+}
+
+float noise(vec2 uv) {
+    vec2 uv_index = floor(uv);
+    vec2 uv_fract = fract(uv);
+
+    vec2 blur = smoothstep(0.0, 1.0, uv_fract);
+
+    return mix( mix( dot( random(uv_index + vec2(0.0,0.0) ), uv_fract - vec2(0.0,0.0) ),
+                     dot( random(uv_index + vec2(1.0,0.0) ), uv_fract - vec2(1.0,0.0) ), blur.x),
+                mix( dot( random(uv_index + vec2(0.0,1.0) ), uv_fract - vec2(0.0,1.0) ),
+                     dot( random(uv_index + vec2(1.0,1.0) ), uv_fract - vec2(1.0,1.0) ), blur.x), blur.y) + 0.5;
+}
+
+void vertex() {
+	VERTEX.y = VERTEX.y + 0.1 + noise(VERTEX.xz * vec2(TIME * 0.01)) * 0.25;
+}
+
+void fragment() {
+	ALBEDO = polygon_color;
+	EMISSION = polygon_color;
+	
+}
+//
+//void light() {
+	//DIFFUSE_LIGHT = mix(DIFFUSE_LIGHT, LIGHT_COLOR, ATTENUATION * max(dot(LIGHT,NORMAL), 0.0));
+//}
+"
+
+[resource]
+render_priority = 0
+shader = SubResource("Shader_0vbwo")
+shader_parameter/polygon_color = Color(0.00386798, 0.510378, 1, 1)

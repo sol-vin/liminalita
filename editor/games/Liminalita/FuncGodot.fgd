@@ -72,6 +72,11 @@
 
 @SolidClass color(204 204 204) = frame_rectangle : "frame_rectangle" 
 [
+	flip_screen_v(choices) : "" = 
+	[
+		0 : "No"
+		1 : "Yes"
+	]
 	linked_to(string) : "" : ""
 	lip_size(float) : "" : "0.1"
 	packed_scene(string) : "" : "test"
@@ -85,15 +90,15 @@
 	seed_value(integer) : "" : 0
 	uuid(string) : "" : ""
 	z_depth(float) : "" : "0.5"
+]
+
+@SolidClass color(204 204 204) = frame_circle : "frame_circle" 
+[
 	flip_screen_v(choices) : "" = 
 	[
 		0 : "No"
 		1 : "Yes"
 	]
-]
-
-@SolidClass color(204 204 204) = frame_circle : "frame_circle" 
-[
 	linked_to(string) : "" : ""
 	lip_size(float) : "" : "0.1"
 	packed_scene(string) : "" : "test"
@@ -106,11 +111,6 @@
 	]
 	seed_value(integer) : "" : 0
 	z_depth(float) : "" : "0.5"
-	flip_screen_v(choices) : "" = 
-	[
-		0 : "No"
-		1 : "Yes"
-	]
 ]
 
 @SolidClass color(204 204 204) = func_no_light : "Worldspawn but no light" []
