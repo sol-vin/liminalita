@@ -25,13 +25,15 @@ float noise(vec2 uv) {
 }
 
 void vertex() {
-	VERTEX.y = VERTEX.y + 0.1 + noise(VERTEX.xz * vec2(TIME * 0.01)) * 0.25;
+	vec3 orig_vertex = VERTEX;
+	float new_vertex_y = orig_vertex.y + 0.1 + noise(VERTEX.xz * vec2(TIME * 0.01)) * 0.25;
+	VERTEX.y = new_vertex_y;
+	COLOR = vec4(polygon_color, 1.0);
 }
 
 void fragment() {
-	ALBEDO = polygon_color;
-	EMISSION = polygon_color;
-	
+	ALBEDO = COLOR.rgb;
+	EMISSION = COLOR.rgb;
 }
 //
 //void light() {
