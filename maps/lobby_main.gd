@@ -2,18 +2,12 @@ extends Node3D
 
 @export var audio_manager : AudioStreamPlayer
 
-@onready var player : Player
+@export var player : Player
 
 func _ready() -> void:
   disable_square_room()
   disable_circle_room()
   enable_square_room()
-
-  for child in $Main.get_children():
-    if child is Player:
-      player = child
-      break
-
 
 func enable_square_room():
   print("Enabled Square!")
@@ -57,9 +51,11 @@ func disable_circle_room():
   $"Circle Arch".visible = false
 
 func teleport_to_square_room():
+  print("teleport_to_square_room")
   player.teleport_in_relation_to($"References/rectangle_room_flipped", $"References/square_room")
 
 func teleport_to_rectangle_room():
+  print("teleport_to_rectangle_room")
   player.teleport_in_relation_to($"References/square_room", $"References/rectangle_room_flipped")
 
 func on_infinite_square_room_trap_body_exited_lt_x(_body : Node3D):
