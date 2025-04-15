@@ -72,6 +72,12 @@ func on_infinite_square_room_trap_body_exited_gt_x(_body : Node3D):
   else:
     $"TeleportToInfiniteSquareRoom".body_exited.connect(on_infinite_square_room_trap_body_exited_gt_x, CONNECT_ONE_SHOT)
 
+func test_body_exited():
+  print("test_body_exited")
+
+func test_body_entered():
+  print("test_body_entered")
+
 func teleport_to_infinite_square_room_trap(_body : Node3D):
   print("teleport_to_infinite_square_room_trap")
   if player.global_position.x >  $"TeleportToInfiniteSquareRoomTrap".global_position.x:

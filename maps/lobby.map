@@ -7672,6 +7672,7 @@
 "_tb_name" "Atrium"
 "_tb_id" "159"
 "_tb_layer_sort_index" "13"
+"_tb_layer_locked" "1"
 // brush 0
 {
 ( 1024 -3344 -80 ) ( 1024 -3343 -80 ) ( 1024 -3344 -79 ) trans [ 0 -1 0 0 ] [ 0 0 -1 0 ] 0 1 1
@@ -28047,6 +28048,7 @@
 "_tb_name" "Atrium To Lobby Hallway"
 "_tb_id" "161"
 "_tb_layer_sort_index" "15"
+"_tb_layer_locked" "1"
 // brush 0
 {
 ( 2448 -2512 512.0416666666752 ) ( 2448 -2528 512.041666666675 ) ( 2448 -2528 -48 ) trans [ 0 -1 0 0 ] [ 0 0 -0.9904024998140021 0.68543994 ] 270 1 1
