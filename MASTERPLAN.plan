@@ -1,10 +1,10 @@
 {
   "version": "0.8.0-alpha.8.1",
   "pan": {
-    "X": 244.11859,
-    "Y": 417.51065
+    "X": -1021.65515,
+    "Y": 1463.5028
   },
-  "zoom": 0.59654700756073,
+  "zoom": 1.2155745029449463,
   "currentPage": 0,
   "properties": {
     "CacheDirectory": ""
@@ -13,16 +13,16 @@
     {
       "id": 0,
       "pan": {
-        "X": 244.11504,
-        "Y": 417.51358
+        "X": -1021.655,
+        "Y": 1463.5026
       },
-      "zoom": 0.59654700756073,
+      "zoom": 1.2155745029449463,
       "cards": [
         {
           "id": 0,
           "rect": {
-            "X": -288,
-            "Y": -224,
+            "X": -1024,
+            "Y": -160,
             "W": 256,
             "H": 32
           },
@@ -38,43 +38,42 @@
         {
           "id": 1,
           "rect": {
-            "X": -288,
-            "Y": -192,
+            "X": -1344,
+            "Y": 0,
             "W": 288,
             "H": 32
           },
           "collapsed": "CollapsedNone",
           "uncollapsedSizeX": 288,
           "uncollapsedSizeY": 32,
-          "contents": "Checkbox",
+          "contents": "Note",
           "properties": {
-            "checked": false,
             "description": "Lobby",
             "filepath": ""
           }
         },
         {
-          "id": 2,
+          "id": 15,
           "rect": {
-            "X": 384,
-            "Y": -192,
-            "W": 256,
+            "X": -768,
+            "Y": 0,
+            "W": 288,
             "H": 32
           },
           "collapsed": "CollapsedNone",
-          "uncollapsedSizeX": 256,
+          "uncollapsedSizeX": 288,
           "uncollapsedSizeY": 32,
           "contents": "Note",
           "properties": {
-            "description": "Items",
+            "description": "Atrium",
             "filepath": ""
           }
         },
         {
           "id": 3,
           "rect": {
-            "X": -256,
-            "Y": -160,
+            "X": -1312,
+            "Y": 32,
             "W": 288,
             "H": 32
           },
@@ -89,28 +88,28 @@
           }
         },
         {
-          "id": 4,
+          "id": 17,
           "rect": {
-            "X": 384,
-            "Y": -160,
+            "X": -736,
+            "Y": 32,
             "W": 288,
-            "H": 32
+            "H": 64
           },
           "collapsed": "CollapsedNone",
           "uncollapsedSizeX": 288,
-          "uncollapsedSizeY": 32,
+          "uncollapsedSizeY": 64,
           "contents": "Checkbox",
           "properties": {
             "checked": false,
-            "description": "Camera",
+            "description": "Sailboat in the fountain",
             "filepath": ""
           }
         },
         {
           "id": 5,
           "rect": {
-            "X": -256,
-            "Y": -128,
+            "X": -1312,
+            "Y": 64,
             "W": 480,
             "H": 32
           },
@@ -125,10 +124,28 @@
           }
         },
         {
-          "id": 6,
+          "id": 40,
           "rect": {
-            "X": 416,
-            "Y": -128,
+            "X": -1280,
+            "Y": 96,
+            "W": 448,
+            "H": 32
+          },
+          "collapsed": "CollapsedShade",
+          "uncollapsedSizeX": 448,
+          "uncollapsedSizeY": 64,
+          "contents": "Checkbox",
+          "properties": {
+            "checked": false,
+            "description": "Add paintings to walls",
+            "filepath": ""
+          }
+        },
+        {
+          "id": 19,
+          "rect": {
+            "X": -704,
+            "Y": 96,
             "W": 288,
             "H": 64
           },
@@ -138,15 +155,51 @@
           "contents": "Checkbox",
           "properties": {
             "checked": false,
-            "description": "Take photos of the world.",
+            "description": "River for the sailboat the follow?",
+            "filepath": ""
+          }
+        },
+        {
+          "id": 41,
+          "rect": {
+            "X": -1280,
+            "Y": 128,
+            "W": 448,
+            "H": 64
+          },
+          "collapsed": "CollapsedNone",
+          "uncollapsedSizeX": 448,
+          "uncollapsedSizeY": 64,
+          "contents": "Checkbox",
+          "properties": {
+            "checked": false,
+            "description": "Add special area after a certain amount of revolutions",
+            "filepath": ""
+          }
+        },
+        {
+          "id": 21,
+          "rect": {
+            "X": -736,
+            "Y": 160,
+            "W": 288,
+            "H": 32
+          },
+          "collapsed": "CollapsedNone",
+          "uncollapsedSizeX": 288,
+          "uncollapsedSizeY": 32,
+          "contents": "Checkbox",
+          "properties": {
+            "checked": false,
+            "description": "90 deg Ramp Room",
             "filepath": ""
           }
         },
         {
           "id": 7,
           "rect": {
-            "X": -256,
-            "Y": -96,
+            "X": -1312,
+            "Y": 192,
             "W": 480,
             "H": 32
           },
@@ -161,10 +214,171 @@
           }
         },
         {
-          "id": 8,
+          "id": 23,
+          "rect": {
+            "X": -736,
+            "Y": 192,
+            "W": 288,
+            "H": 64
+          },
+          "collapsed": "CollapsedNone",
+          "uncollapsedSizeX": 288,
+          "uncollapsedSizeY": 64,
+          "contents": "Checkbox",
+          "properties": {
+            "checked": false,
+            "description": "Atrium to lobby connections",
+            "filepath": ""
+          }
+        },
+        {
+          "id": 42,
+          "rect": {
+            "X": -1280,
+            "Y": 224,
+            "W": 448,
+            "H": 64
+          },
+          "collapsed": "CollapsedNone",
+          "uncollapsedSizeX": 448,
+          "uncollapsedSizeY": 64,
+          "contents": "Checkbox",
+          "properties": {
+            "checked": false,
+            "description": "Add shader to change material color based on player position",
+            "filepath": ""
+          }
+        },
+        {
+          "id": 25,
+          "rect": {
+            "X": -736,
+            "Y": 256,
+            "W": 288,
+            "H": 32
+          },
+          "collapsed": "CollapsedShade",
+          "uncollapsedSizeX": 288,
+          "uncollapsedSizeY": 32,
+          "contents": "Checkbox",
+          "properties": {
+            "checked": false,
+            "description": "Benches",
+            "filepath": ""
+          }
+        },
+        {
+          "id": 2,
           "rect": {
             "X": -256,
-            "Y": -64,
+            "Y": 256,
+            "W": 256,
+            "H": 32
+          },
+          "collapsed": "CollapsedNone",
+          "uncollapsedSizeX": 256,
+          "uncollapsedSizeY": 32,
+          "contents": "Note",
+          "properties": {
+            "description": "Items",
+            "filepath": ""
+          }
+        },
+        {
+          "id": 43,
+          "rect": {
+            "X": -1280,
+            "Y": 288,
+            "W": 288,
+            "H": 32
+          },
+          "collapsed": "CollapsedShade",
+          "uncollapsedSizeX": 288,
+          "uncollapsedSizeY": 32,
+          "contents": "Checkbox",
+          "properties": {
+            "checked": false,
+            "description": "Add Moon",
+            "filepath": ""
+          }
+        },
+        {
+          "id": 49,
+          "rect": {
+            "X": -736,
+            "Y": 288,
+            "W": 288,
+            "H": 32
+          },
+          "collapsed": "CollapsedNone",
+          "uncollapsedSizeX": 288,
+          "uncollapsedSizeY": 32,
+          "contents": "Checkbox",
+          "properties": {
+            "checked": false,
+            "description": "Wall lights",
+            "filepath": ""
+          }
+        },
+        {
+          "id": 4,
+          "rect": {
+            "X": -224,
+            "Y": 288,
+            "W": 288,
+            "H": 32
+          },
+          "collapsed": "CollapsedNone",
+          "uncollapsedSizeX": 288,
+          "uncollapsedSizeY": 32,
+          "contents": "Checkbox",
+          "properties": {
+            "checked": false,
+            "description": "Camera",
+            "filepath": ""
+          }
+        },
+        {
+          "id": 44,
+          "rect": {
+            "X": -1280,
+            "Y": 320,
+            "W": 288,
+            "H": 32
+          },
+          "collapsed": "CollapsedNone",
+          "uncollapsedSizeX": 288,
+          "uncollapsedSizeY": 32,
+          "contents": "Checkbox",
+          "properties": {
+            "checked": false,
+            "description": "Add stars",
+            "filepath": ""
+          }
+        },
+        {
+          "id": 6,
+          "rect": {
+            "X": -192,
+            "Y": 320,
+            "W": 288,
+            "H": 64
+          },
+          "collapsed": "CollapsedNone",
+          "uncollapsedSizeX": 288,
+          "uncollapsedSizeY": 64,
+          "contents": "Checkbox",
+          "properties": {
+            "checked": false,
+            "description": "Take photos of the world.",
+            "filepath": ""
+          }
+        },
+        {
+          "id": 8,
+          "rect": {
+            "X": -1312,
+            "Y": 352,
             "W": 480,
             "H": 32
           },
@@ -179,10 +393,28 @@
           }
         },
         {
+          "id": 38,
+          "rect": {
+            "X": -1312,
+            "Y": 384,
+            "W": 480,
+            "H": 64
+          },
+          "collapsed": "CollapsedNone",
+          "uncollapsedSizeX": 480,
+          "uncollapsedSizeY": 64,
+          "contents": "Checkbox",
+          "properties": {
+            "checked": false,
+            "description": "Add paintings to square room <-> rectangle room flipped hallways",
+            "filepath": ""
+          }
+        },
+        {
           "id": 9,
           "rect": {
-            "X": 416,
-            "Y": -64,
+            "X": -192,
+            "Y": 384,
             "W": 288,
             "H": 64
           },
@@ -197,28 +429,28 @@
           }
         },
         {
-          "id": 10,
+          "id": 39,
           "rect": {
-            "X": -256,
-            "Y": -32,
+            "X": -1312,
+            "Y": 448,
             "W": 480,
-            "H": 64
+            "H": 32
           },
           "collapsed": "CollapsedShade",
           "uncollapsedSizeX": 480,
-          "uncollapsedSizeY": 64,
+          "uncollapsedSizeY": 32,
           "contents": "Checkbox",
           "properties": {
             "checked": false,
-            "description": "Make unique versions of lobby for forking paths",
+            "description": "Add stuff to the desk",
             "filepath": ""
           }
         },
         {
           "id": 11,
           "rect": {
-            "X": 416,
-            "Y": 0,
+            "X": -192,
+            "Y": 448,
             "W": 288,
             "H": 64
           },
@@ -235,8 +467,8 @@
         {
           "id": 12,
           "rect": {
-            "X": -256,
-            "Y": 32,
+            "X": -1312,
+            "Y": 480,
             "W": 288,
             "H": 32
           },
@@ -251,28 +483,28 @@
           }
         },
         {
-          "id": 39,
+          "id": 48,
           "rect": {
-            "X": -256,
-            "Y": 64,
+            "X": -1312,
+            "Y": 512,
             "W": 288,
-            "H": 64
+            "H": 32
           },
           "collapsed": "CollapsedNone",
           "uncollapsedSizeX": 288,
-          "uncollapsedSizeY": 64,
+          "uncollapsedSizeY": 32,
           "contents": "Checkbox",
           "properties": {
             "checked": false,
-            "description": "Lobby to Atrium connections",
+            "description": "Benches",
             "filepath": ""
           }
         },
         {
           "id": 14,
           "rect": {
-            "X": 416,
-            "Y": 64,
+            "X": -192,
+            "Y": 512,
             "W": 288,
             "H": 64
           },
@@ -289,26 +521,26 @@
         {
           "id": 13,
           "rect": {
-            "X": -288,
-            "Y": 128,
+            "X": -1312,
+            "Y": 544,
             "W": 288,
-            "H": 32
+            "H": 64
           },
           "collapsed": "CollapsedNone",
           "uncollapsedSizeX": 288,
-          "uncollapsedSizeY": 32,
+          "uncollapsedSizeY": 64,
           "contents": "Checkbox",
           "properties": {
             "checked": false,
-            "description": "Atrium",
+            "description": "Lobby to Atrium connections",
             "filepath": ""
           }
         },
         {
           "id": 16,
           "rect": {
-            "X": 384,
-            "Y": 128,
+            "X": -224,
+            "Y": 576,
             "W": 288,
             "H": 32
           },
@@ -323,28 +555,10 @@
           }
         },
         {
-          "id": 15,
-          "rect": {
-            "X": -256,
-            "Y": 160,
-            "W": 288,
-            "H": 64
-          },
-          "collapsed": "CollapsedNone",
-          "uncollapsedSizeX": 288,
-          "uncollapsedSizeY": 64,
-          "contents": "Checkbox",
-          "properties": {
-            "checked": false,
-            "description": "Sailboat in the fountain",
-            "filepath": ""
-          }
-        },
-        {
           "id": 18,
           "rect": {
-            "X": 416,
-            "Y": 160,
+            "X": -192,
+            "Y": 608,
             "W": 288,
             "H": 64
           },
@@ -359,28 +573,10 @@
           }
         },
         {
-          "id": 17,
-          "rect": {
-            "X": -224,
-            "Y": 224,
-            "W": 288,
-            "H": 64
-          },
-          "collapsed": "CollapsedNone",
-          "uncollapsedSizeX": 288,
-          "uncollapsedSizeY": 64,
-          "contents": "Checkbox",
-          "properties": {
-            "checked": false,
-            "description": "River for the sailboat the follow?",
-            "filepath": ""
-          }
-        },
-        {
           "id": 20,
           "rect": {
-            "X": 416,
-            "Y": 224,
+            "X": -192,
+            "Y": 672,
             "W": 288,
             "H": 64
           },
@@ -395,28 +591,27 @@
           }
         },
         {
-          "id": 19,
+          "id": 27,
           "rect": {
-            "X": -256,
-            "Y": 288,
+            "X": -1408,
+            "Y": 736,
             "W": 288,
             "H": 32
           },
           "collapsed": "CollapsedNone",
           "uncollapsedSizeX": 288,
           "uncollapsedSizeY": 32,
-          "contents": "Checkbox",
+          "contents": "Note",
           "properties": {
-            "checked": false,
-            "description": "90 deg Ramp Room",
+            "description": "General",
             "filepath": ""
           }
         },
         {
           "id": 22,
           "rect": {
-            "X": 416,
-            "Y": 288,
+            "X": -192,
+            "Y": 736,
             "W": 288,
             "H": 32
           },
@@ -431,118 +626,10 @@
           }
         },
         {
-          "id": 38,
+          "id": 29,
           "rect": {
-            "X": -256,
-            "Y": 320,
-            "W": 288,
-            "H": 64
-          },
-          "collapsed": "CollapsedNone",
-          "uncollapsedSizeX": 288,
-          "uncollapsedSizeY": 64,
-          "contents": "Checkbox",
-          "properties": {
-            "checked": false,
-            "description": "Atrium to lobby connections",
-            "filepath": ""
-          }
-        },
-        {
-          "id": 23,
-          "rect": {
-            "X": 416,
-            "Y": 320,
-            "W": 288,
-            "H": 64
-          },
-          "collapsed": "CollapsedNone",
-          "uncollapsedSizeX": 288,
-          "uncollapsedSizeY": 64,
-          "contents": "Checkbox",
-          "properties": {
-            "checked": false,
-            "description": "Click with no seed set to randomize",
-            "filepath": ""
-          }
-        },
-        {
-          "id": 26,
-          "rect": {
-            "X": -256,
-            "Y": 384,
-            "W": 288,
-            "H": 32
-          },
-          "collapsed": "CollapsedShade",
-          "uncollapsedSizeX": 288,
-          "uncollapsedSizeY": 32,
-          "contents": "Checkbox",
-          "properties": {
-            "checked": false,
-            "description": "Benches",
-            "filepath": ""
-          }
-        },
-        {
-          "id": 24,
-          "rect": {
-            "X": 384,
-            "Y": 384,
-            "W": 288,
-            "H": 32
-          },
-          "collapsed": "CollapsedNone",
-          "uncollapsedSizeX": 288,
-          "uncollapsedSizeY": 32,
-          "contents": "Checkbox",
-          "properties": {
-            "checked": false,
-            "description": "Coins",
-            "filepath": ""
-          }
-        },
-        {
-          "id": 27,
-          "rect": {
-            "X": -288,
-            "Y": 416,
-            "W": 288,
-            "H": 32
-          },
-          "collapsed": "CollapsedNone",
-          "uncollapsedSizeX": 288,
-          "uncollapsedSizeY": 32,
-          "contents": "Checkbox",
-          "properties": {
-            "checked": false,
-            "description": "General",
-            "filepath": ""
-          }
-        },
-        {
-          "id": 25,
-          "rect": {
-            "X": 384,
-            "Y": 416,
-            "W": 288,
-            "H": 32
-          },
-          "collapsed": "CollapsedNone",
-          "uncollapsedSizeX": 288,
-          "uncollapsedSizeY": 32,
-          "contents": "Checkbox",
-          "properties": {
-            "checked": false,
-            "description": "Glasses?",
-            "filepath": ""
-          }
-        },
-        {
-          "id": 28,
-          "rect": {
-            "X": -256,
-            "Y": 448,
+            "X": -1376,
+            "Y": 768,
             "W": 288,
             "H": 32
           },
@@ -557,10 +644,28 @@
           }
         },
         {
-          "id": 29,
+          "id": 24,
           "rect": {
-            "X": -256,
-            "Y": 480,
+            "X": -192,
+            "Y": 768,
+            "W": 288,
+            "H": 64
+          },
+          "collapsed": "CollapsedNone",
+          "uncollapsedSizeX": 288,
+          "uncollapsedSizeY": 64,
+          "contents": "Checkbox",
+          "properties": {
+            "checked": false,
+            "description": "Click with no seed set to randomize",
+            "filepath": ""
+          }
+        },
+        {
+          "id": 30,
+          "rect": {
+            "X": -1376,
+            "Y": 800,
             "W": 288,
             "H": 64
           },
@@ -575,10 +680,28 @@
           }
         },
         {
-          "id": 30,
+          "id": 26,
           "rect": {
             "X": -224,
-            "Y": 544,
+            "Y": 832,
+            "W": 288,
+            "H": 32
+          },
+          "collapsed": "CollapsedNone",
+          "uncollapsedSizeX": 288,
+          "uncollapsedSizeY": 32,
+          "contents": "Checkbox",
+          "properties": {
+            "checked": false,
+            "description": "Coins",
+            "filepath": ""
+          }
+        },
+        {
+          "id": 31,
+          "rect": {
+            "X": -1344,
+            "Y": 864,
             "W": 288,
             "H": 32
           },
@@ -593,10 +716,28 @@
           }
         },
         {
-          "id": 31,
+          "id": 28,
           "rect": {
             "X": -224,
-            "Y": 576,
+            "Y": 864,
+            "W": 288,
+            "H": 32
+          },
+          "collapsed": "CollapsedNone",
+          "uncollapsedSizeX": 288,
+          "uncollapsedSizeY": 32,
+          "contents": "Checkbox",
+          "properties": {
+            "checked": false,
+            "description": "Glasses?",
+            "filepath": ""
+          }
+        },
+        {
+          "id": 32,
+          "rect": {
+            "X": -1344,
+            "Y": 896,
             "W": 288,
             "H": 32
           },
@@ -611,10 +752,10 @@
           }
         },
         {
-          "id": 32,
+          "id": 33,
           "rect": {
-            "X": -256,
-            "Y": 608,
+            "X": -1376,
+            "Y": 928,
             "W": 288,
             "H": 64
           },
@@ -629,10 +770,10 @@
           }
         },
         {
-          "id": 33,
+          "id": 34,
           "rect": {
-            "X": -256,
-            "Y": 672,
+            "X": -1376,
+            "Y": 992,
             "W": 288,
             "H": 32
           },
@@ -649,8 +790,8 @@
         {
           "id": 35,
           "rect": {
-            "X": -224,
-            "Y": 704,
+            "X": -1344,
+            "Y": 1024,
             "W": 544,
             "H": 224
           },
@@ -666,8 +807,8 @@
         {
           "id": 36,
           "rect": {
-            "X": -224,
-            "Y": 928,
+            "X": -1344,
+            "Y": 1248,
             "W": 544,
             "H": 96
           },
@@ -683,8 +824,8 @@
         {
           "id": 37,
           "rect": {
-            "X": -224,
-            "Y": 1024,
+            "X": -1344,
+            "Y": 1344,
             "W": 544,
             "H": 96
           },
@@ -694,6 +835,78 @@
           "contents": "Note",
           "properties": {
             "description": "Frames now only need to reference the screen material and increment and decrement the global counter.",
+            "filepath": ""
+          }
+        },
+        {
+          "id": 47,
+          "rect": {
+            "X": -1376,
+            "Y": 1440,
+            "W": 288,
+            "H": 96
+          },
+          "collapsed": "CollapsedNone",
+          "uncollapsedSizeX": 288,
+          "uncollapsedSizeY": 96,
+          "contents": "Checkbox",
+          "properties": {
+            "checked": false,
+            "description": "General loading and unloading mech for levels",
+            "filepath": ""
+          }
+        },
+        {
+          "id": 50,
+          "rect": {
+            "X": -1376,
+            "Y": 1536,
+            "W": 288,
+            "H": 32
+          },
+          "collapsed": "CollapsedNone",
+          "uncollapsedSizeX": 288,
+          "uncollapsedSizeY": 32,
+          "contents": "Checkbox",
+          "properties": {
+            "checked": false,
+            "description": "Cut loops",
+            "filepath": ""
+          }
+        },
+        {
+          "id": 51,
+          "rect": {
+            "X": -1344,
+            "Y": 1568,
+            "W": 288,
+            "H": 32
+          },
+          "collapsed": "CollapsedNone",
+          "uncollapsedSizeX": 288,
+          "uncollapsedSizeY": 32,
+          "contents": "Checkbox",
+          "properties": {
+            "checked": false,
+            "description": "Day Shift",
+            "filepath": ""
+          }
+        },
+        {
+          "id": 52,
+          "rect": {
+            "X": -1344,
+            "Y": 1600,
+            "W": 288,
+            "H": 32
+          },
+          "collapsed": "CollapsedShade",
+          "uncollapsedSizeX": 288,
+          "uncollapsedSizeY": 32,
+          "contents": "Checkbox",
+          "properties": {
+            "checked": false,
+            "description": "Night Shift",
             "filepath": ""
           }
         }

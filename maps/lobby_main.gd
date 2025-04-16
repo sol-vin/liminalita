@@ -53,30 +53,12 @@ func disable_circle_room():
 func teleport_to_square_room():
   print("teleport_to_square_room")
   player.teleport_in_relation_to($"References/rectangle_room_flipped", $"References/square_room")
+  music_transition_to_02_loop2()
 
 func teleport_to_rectangle_room():
   print("teleport_to_rectangle_room")
   player.teleport_in_relation_to($"References/square_room", $"References/rectangle_room_flipped")
-
-func on_infinite_square_room_trap_body_exited_lt_x(_body : Node3D):
-  print("TeleportToInfiniteSquareRoom.body_exited p<isr")
-  if player.global_position.x < $"TeleportToInfiniteSquareRoom".global_position.x:
-    teleport_to_infinite_square_room()
-  else:
-    $"TeleportToInfiniteSquareRoom".body_exited.connect(on_infinite_square_room_trap_body_exited_lt_x, CONNECT_ONE_SHOT)
-
-func on_infinite_square_room_trap_body_exited_gt_x(_body : Node3D):
-  print("TeleportToInfiniteSquareRoom.body_exited p>isr")
-  if player.global_position.x > $"TeleportToInfiniteSquareRoom".global_position.x:
-    teleport_to_infinite_square_room()
-  else:
-    $"TeleportToInfiniteSquareRoom".body_exited.connect(on_infinite_square_room_trap_body_exited_gt_x, CONNECT_ONE_SHOT)
-
-func test_body_exited():
-  print("test_body_exited")
-
-func test_body_entered():
-  print("test_body_entered")
+  music_transition_to_02_loop2()
 
 func teleport_to_infinite_square_room_trap(_body : Node3D):
   print("teleport_to_infinite_square_room_trap")
@@ -85,12 +67,29 @@ func teleport_to_infinite_square_room_trap(_body : Node3D):
   else:
     $"TeleportToInfiniteSquareRoom".body_exited.connect(on_infinite_square_room_trap_body_exited_gt_x, CONNECT_ONE_SHOT)
   player.teleport_in_relation_to($"References/infinite_square_room", $"References/infinite_square_room_trap")
+  music_transition_to_02_loop2()
 
-
-func teleport_to_infinite_square_room():
+func teleport_to_infinite_square_room(_body : Node3D):
   print("teleport_to_infinite_square_room")
   player.teleport_in_relation_to($"References/infinite_square_room_trap", $"References/infinite_square_room")
-  $"TeleportToInfiniteSquareRoomTrap".body_exited.connect(teleport_to_infinite_square_room_trap, CONNECT_ONE_SHOT)
+  $"TeleportToInfiniteSquareRoomTrap".body_exited.connect(func(_b):
+    $"TeleportToInfiniteSquareRoomTrap".body_exited.connect(teleport_to_infinite_square_room_trap, CONNECT_ONE_SHOT)
+  , CONNECT_ONE_SHOT)
+  music_transition_to_02_loop2()
+
+func on_infinite_square_room_trap_body_exited_lt_x(_body : Node3D):
+  print("TeleportToInfiniteSquareRoom.body_exited p<isr")
+  if player.global_position.x < $"TeleportToInfiniteSquareRoom".global_position.x:
+    teleport_to_infinite_square_room(_body)
+  else:
+    $"TeleportToInfiniteSquareRoom".body_exited.connect(on_infinite_square_room_trap_body_exited_lt_x, CONNECT_ONE_SHOT)
+
+func on_infinite_square_room_trap_body_exited_gt_x(_body : Node3D):
+  print("TeleportToInfiniteSquareRoom.body_exited p>isr")
+  if player.global_position.x > $"TeleportToInfiniteSquareRoom".global_position.x:
+    teleport_to_infinite_square_room(_body)
+  else:
+    $"TeleportToInfiniteSquareRoom".body_exited.connect(on_infinite_square_room_trap_body_exited_gt_x, CONNECT_ONE_SHOT)
 
 func music_transition_to_02_loop2():
   if audio_manager.get_stream_playback().get_current_clip_index() == 0:
