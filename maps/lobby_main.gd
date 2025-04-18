@@ -11,44 +11,48 @@ func _ready() -> void:
 
 func enable_square_room():
   print("Enabled Square!")
-  $"Inner Square".visible = true
+  $"Inner Square".show()
   $SquareRoomTrigger.set_deferred("monitoring", false)
   for square_child in $"Inner Square".get_children():
     if square_child is StaticBody3D:
       square_child.collision_layer = 1
-  $"Square Arch".visible = true
+  if !$"To Atrium Hallway".visible:
+    $"Square Arch".show()
   $"TeleportToInfiniteSquareRoom".monitoring = true
   $"TeleportToInfiniteSquareRoomTrap".monitoring = true
 
 
 func disable_square_room():
   print("Disabled Square!")
-  $"Inner Square".visible = false
+  $"Inner Square".hide()
   $SquareRoomTrigger.set_deferred("monitoring", true)
   for square_child in $"Inner Square".get_children():
     if square_child is StaticBody3D:
       square_child.collision_layer = 0
-  $"Square Arch".visible = false
+  if !$"To Atrium Hallway".visible:
+    $"Square Arch".hide()
   $"TeleportToInfiniteSquareRoom".monitoring = false
   $"TeleportToInfiniteSquareRoomTrap".monitoring = false
   
 func enable_circle_room():
   print("Enabled Circle!")
-  $"Inner Circle".visible = true
+  $"Inner Circle".show()
   $CircleRoomTrigger.set_deferred("monitoring", false)
   for circle_child in $"Inner Circle".get_children():
     if circle_child is StaticBody3D:
       circle_child.collision_layer = 1
-  $"Circle Arch".visible = true
+  if !$"To Atrium Hallway".visible:
+    $"Circle Arch".show()
 
 func disable_circle_room():
   print("Disabled Circle!")
-  $"Inner Circle".visible = false
+  $"Inner Circle".hide()
   $CircleRoomTrigger.set_deferred("monitoring", true)
   for circle_child in $"Inner Circle".get_children():
     if circle_child is StaticBody3D:
       circle_child.collision_layer = 0
-  $"Circle Arch".visible = false
+  if !$"To Atrium Hallway".visible:
+    $"Circle Arch".hide()
 
 func teleport_to_square_room():
   print("teleport_to_square_room")

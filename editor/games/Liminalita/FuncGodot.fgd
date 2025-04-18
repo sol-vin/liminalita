@@ -89,7 +89,7 @@
 	]
 	seed_value(integer) : "" : 0
 	uuid(string) : "" : ""
-	z_depth(float) : "" : "0.5"
+	z_depth(float) : "" : "0.25"
 ]
 
 @SolidClass color(204 204 204) = frame_circle : "frame_circle" 
@@ -110,7 +110,7 @@
 		1 : "Yes"
 	]
 	seed_value(integer) : "" : 0
-	z_depth(float) : "" : "0.5"
+	z_depth(float) : "" : "0.25"
 ]
 
 @SolidClass color(204 204 204) = func_no_light : "Worldspawn but no light" []

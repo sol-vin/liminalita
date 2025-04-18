@@ -4111,6 +4111,7 @@
 // entity 133
 {
 "classname" "frame_rectangle"
+"packed_scene" "lines"
 "_tb_layer" "3"
 // brush 0
 {

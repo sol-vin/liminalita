@@ -63,7 +63,6 @@ func _draw() -> void:
 	var random_key = COLORS.keys()[rng.randi() % COLORS.size()]
 	for x in num_of_squares:
 		for y in total_y:
-
 			var colors : Array = COLORS[random_key].duplicate()
 			var c1_index = rng.randi_range(0, colors.size()-1)
 			var color1 = colors[c1_index]

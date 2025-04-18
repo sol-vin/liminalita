@@ -41,4 +41,4 @@ audio_manager = NodePath("../Audio Manager")
 player = NodePath("../Character")
 
 [node name="Character" parent="." instance=ExtResource("10_vivmo")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.710801, 38.7696)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.710801, 10.2631)

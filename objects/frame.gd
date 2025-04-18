@@ -25,7 +25,7 @@ class_name Frame extends Node3D
 		lip_size = n_lip_size
 		#rebuild()
 		
-@export_range(0, 0.99, 0.0001) var z_depth = 0.5:
+@export_range(0, 0.99, 0.0001) var z_depth = 0.25:
 	set(n_z_depth):
 		z_depth = n_z_depth
 		#rebuild()

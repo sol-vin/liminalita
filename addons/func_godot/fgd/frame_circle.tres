@@ -34,7 +34,7 @@ class_properties = {
 "screen_scale": Vector2(1, 1),
 "seed": false,
 "seed_value": 0,
-"z_depth": 0.5
+"z_depth": 0.25
 }
 class_property_descriptions = {}
 auto_apply_to_matching_node_properties = false
