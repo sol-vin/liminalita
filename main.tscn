@@ -1,9 +1,10 @@
-[gd_scene load_steps=8 format=3 uid="uid://cxka74kc8ymy7"]
+[gd_scene load_steps=9 format=3 uid="uid://cxka74kc8ymy7"]
 
 [ext_resource type="Script" uid="uid://c5ynk43c4m62t" path="res://main.gd" id="1_efxa6"]
 [ext_resource type="AudioStream" uid="uid://cvqctc6rq4f83" path="res://music/chops/02-loop1.mp3" id="4_lquwl"]
 [ext_resource type="AudioStream" uid="uid://bs3ux7lexunlq" path="res://music/chops/02-loop2.mp3" id="5_7mycd"]
 [ext_resource type="PackedScene" uid="uid://0yb7kh0wmw7p" path="res://maps/lobby_main.tscn" id="5_272bh"]
+[ext_resource type="PackedScene" uid="uid://0aqfxfvp45gl" path="res://maps/atrium.tscn" id="6_272bh"]
 [ext_resource type="PackedScene" uid="uid://38yr2yil38vx" path="res://player.tscn" id="10_vivmo"]
 [ext_resource type="Environment" uid="uid://dhptyfor421yu" path="res://objects/player_camera_environment.tres" id="11_074og"]
 
@@ -39,6 +40,8 @@ environment = ExtResource("11_074og")
 [node name="Lobby" parent="." node_paths=PackedStringArray("audio_manager", "player") instance=ExtResource("5_272bh")]
 audio_manager = NodePath("../Audio Manager")
 player = NodePath("../Character")
+
+[node name="Atrium" parent="." instance=ExtResource("6_272bh")]
 
 [node name="Character" parent="." instance=ExtResource("10_vivmo")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.710801, 10.2631)
