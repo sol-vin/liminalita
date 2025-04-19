@@ -1,8 +1,8 @@
 extends Node3D
 
 @export var audio_manager : AudioStreamPlayer
-
 @export var player : Player
+@export var references : FuncGodotMap
 
 func _ready() -> void:
   disable_square_room()
@@ -56,12 +56,12 @@ func disable_circle_room():
 
 func teleport_to_square_room():
   print("teleport_to_square_room")
-  player.teleport_in_relation_to($"References/rectangle_room_flipped", $"References/square_room")
+  player.teleport_in_relation_to(references.get_node("rectangle_room_flipped"), references.get_node("square_room"))
   music_transition_to_02_loop2()
 
 func teleport_to_rectangle_room():
   print("teleport_to_rectangle_room")
-  player.teleport_in_relation_to($"References/square_room", $"References/rectangle_room_flipped")
+  player.teleport_in_relation_to(references.get_node("square_room"), references.get_node("rectangle_room_flipped"))
   music_transition_to_02_loop2()
 
 func teleport_to_infinite_square_room_trap(_body : Node3D):
@@ -70,12 +70,12 @@ func teleport_to_infinite_square_room_trap(_body : Node3D):
     $"TeleportToInfiniteSquareRoom".body_exited.connect(on_infinite_square_room_trap_body_exited_lt_x, CONNECT_ONE_SHOT)
   else:
     $"TeleportToInfiniteSquareRoom".body_exited.connect(on_infinite_square_room_trap_body_exited_gt_x, CONNECT_ONE_SHOT)
-  player.teleport_in_relation_to($"References/infinite_square_room", $"References/infinite_square_room_trap")
+  player.teleport_in_relation_to(references.get_node("infinite_square_room"), references.get_node("infinite_square_room_trap"))
   music_transition_to_02_loop2()
 
 func teleport_to_infinite_square_room(_body : Node3D):
   print("teleport_to_infinite_square_room")
-  player.teleport_in_relation_to($"References/infinite_square_room_trap", $"References/infinite_square_room")
+  player.teleport_in_relation_to(references.get_node("infinite_square_room_trap"), references.get_node("infinite_square_room"))
   $"TeleportToInfiniteSquareRoomTrap".body_exited.connect(func(_b):
     $"TeleportToInfiniteSquareRoomTrap".body_exited.connect(teleport_to_infinite_square_room_trap, CONNECT_ONE_SHOT)
   , CONNECT_ONE_SHOT)
