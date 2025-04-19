@@ -1,10 +1,10 @@
 {
   "version": "0.8.0-alpha.8.1",
   "pan": {
-    "X": -1038.9193,
-    "Y": 954.20294
+    "X": -735.5143,
+    "Y": 466.59778
   },
-  "zoom": 0.6950721740722656,
+  "zoom": 0.4392472207546234,
   "currentPage": 0,
   "properties": {
     "CacheDirectory": ""
@@ -13,10 +13,10 @@
     {
       "id": 0,
       "pan": {
-        "X": -1038.9196,
-        "Y": 954.2028
+        "X": -735.5144,
+        "Y": 466.59772
       },
-      "zoom": 0.6950721740722656,
+      "zoom": 0.4392472207546234,
       "cards": [
         {
           "id": 0,
@@ -621,7 +621,7 @@
           "uncollapsedSizeY": 64,
           "contents": "Checkbox",
           "properties": {
-            "checked": false,
+            "checked": true,
             "description": "Lobby to Atrium connections",
             "filepath": ""
           }

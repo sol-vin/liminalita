@@ -20,6 +20,7 @@ func enable_square_room():
     $"Square Arch".show()
   $"TeleportToInfiniteSquareRoom".monitoring = true
   $"TeleportToInfiniteSquareRoomTrap".monitoring = true
+  music_transition_to_next()
 
 
 func disable_square_room():
@@ -43,6 +44,8 @@ func enable_circle_room():
       circle_child.collision_layer = 1
   if !$"To Atrium Hallway".visible:
     $"Circle Arch".show()
+  music_transition_to_next()
+
 
 func disable_circle_room():
   print("Disabled Circle!")
@@ -57,12 +60,13 @@ func disable_circle_room():
 func teleport_to_square_room():
   print("teleport_to_square_room")
   player.teleport_in_relation_to(references.get_node("rectangle_room_flipped"), references.get_node("square_room"))
-  music_transition_to_02_loop2()
+
+  music_transition_to_next()
 
 func teleport_to_rectangle_room():
   print("teleport_to_rectangle_room")
   player.teleport_in_relation_to(references.get_node("square_room"), references.get_node("rectangle_room_flipped"))
-  music_transition_to_02_loop2()
+  music_transition_to_next()
 
 func teleport_to_infinite_square_room_trap(_body : Node3D):
   print("teleport_to_infinite_square_room_trap")
@@ -71,7 +75,7 @@ func teleport_to_infinite_square_room_trap(_body : Node3D):
   else:
     $"TeleportToInfiniteSquareRoom".body_exited.connect(on_infinite_square_room_trap_body_exited_gt_x, CONNECT_ONE_SHOT)
   player.teleport_in_relation_to(references.get_node("infinite_square_room"), references.get_node("infinite_square_room_trap"))
-  music_transition_to_02_loop2()
+  music_transition_to_next()
 
 func teleport_to_infinite_square_room(_body : Node3D):
   print("teleport_to_infinite_square_room")
@@ -79,7 +83,7 @@ func teleport_to_infinite_square_room(_body : Node3D):
   $"TeleportToInfiniteSquareRoomTrap".body_exited.connect(func(_b):
     $"TeleportToInfiniteSquareRoomTrap".body_exited.connect(teleport_to_infinite_square_room_trap, CONNECT_ONE_SHOT)
   , CONNECT_ONE_SHOT)
-  music_transition_to_02_loop2()
+  music_transition_to_next()
 
 func on_infinite_square_room_trap_body_exited_lt_x(_body : Node3D):
   print("TeleportToInfiniteSquareRoom.body_exited p<isr")
@@ -95,6 +99,36 @@ func on_infinite_square_room_trap_body_exited_gt_x(_body : Node3D):
   else:
     $"TeleportToInfiniteSquareRoom".body_exited.connect(on_infinite_square_room_trap_body_exited_gt_x, CONNECT_ONE_SHOT)
 
-func music_transition_to_02_loop2():
-  if audio_manager.get_stream_playback().get_current_clip_index() == 0:
-    audio_manager["parameters/switch_to_clip"] = &"loop2"
+func teleport_to_atrium():
+  player.teleport_in_relation_to(references.get_node("lobby_to_atrium"), references.get_node("atrium_to_lobby"))
+
+func music_transition_to_next():
+  if get_current_audio_clip() == &"01-opening":
+    pass
+  elif get_current_audio_clip() == &"01-loop1":
+    pass
+  elif get_current_audio_clip() == &"01-ending":
+    pass
+  elif get_current_audio_clip() == &"02-loop1":
+    audio_manager.get_stream_playback().switch_to_clip_by_name(&"02-loop2")
+  elif get_current_audio_clip() == &"02-loop2":
+    pass
+  elif get_current_audio_clip() == &"03-opening":
+    pass
+  elif get_current_audio_clip() == &"03-loop1":
+    audio_manager.get_stream_playback().switch_to_clip_by_name(&"03-loop2")
+  elif get_current_audio_clip() == &"03-loop2":
+    pass
+
+func music_transition_to_02():
+  audio_manager.get_stream_playback().switch_to_clip_by_name(&"01-ending")
+
+
+func music_transition_to_03():
+  audio_manager.get_stream_playback().switch_to_clip_by_name(&"03-opening")
+
+func music_transition_to_03_loop2():
+  audio_manager.get_stream_playback().switch_to_clip_by_name(&"03-loop2")
+
+func get_current_audio_clip():
+  return audio_manager.stream.get_clip_name(audio_manager.get_stream_playback().get_current_clip_index())

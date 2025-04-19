@@ -1,10 +1,10 @@
 {
   "version": "0.8.0-alpha.8.1",
   "pan": {
-    "X": -1021.65515,
-    "Y": 1463.5028
+    "X": -831.13055,
+    "Y": 682.49677
   },
-  "zoom": 1.2155745029449463,
+  "zoom": 0.9641278386116028,
   "currentPage": 0,
   "properties": {
     "CacheDirectory": ""
@@ -13,10 +13,10 @@
     {
       "id": 0,
       "pan": {
-        "X": -1021.655,
-        "Y": 1463.5026
+        "X": -831.13043,
+        "Y": 682.49664
       },
-      "zoom": 1.2155745029449463,
+      "zoom": 0.9641278386116028,
       "cards": [
         {
           "id": 0,
@@ -53,7 +53,7 @@
           }
         },
         {
-          "id": 15,
+          "id": 2,
           "rect": {
             "X": -768,
             "Y": 0,
@@ -66,6 +66,23 @@
           "contents": "Note",
           "properties": {
             "description": "Atrium",
+            "filepath": ""
+          }
+        },
+        {
+          "id": 14,
+          "rect": {
+            "X": -288,
+            "Y": 0,
+            "W": 256,
+            "H": 32
+          },
+          "collapsed": "CollapsedNone",
+          "uncollapsedSizeX": 256,
+          "uncollapsedSizeY": 32,
+          "contents": "Note",
+          "properties": {
+            "description": "Items",
             "filepath": ""
           }
         },
@@ -88,7 +105,7 @@
           }
         },
         {
-          "id": 17,
+          "id": 4,
           "rect": {
             "X": -736,
             "Y": 32,
@@ -102,6 +119,24 @@
           "properties": {
             "checked": false,
             "description": "Sailboat in the fountain",
+            "filepath": ""
+          }
+        },
+        {
+          "id": 17,
+          "rect": {
+            "X": -256,
+            "Y": 32,
+            "W": 288,
+            "H": 32
+          },
+          "collapsed": "CollapsedNone",
+          "uncollapsedSizeX": 288,
+          "uncollapsedSizeY": 32,
+          "contents": "Checkbox",
+          "properties": {
+            "checked": false,
+            "description": "Camera",
             "filepath": ""
           }
         },
@@ -124,7 +159,25 @@
           }
         },
         {
-          "id": 40,
+          "id": 19,
+          "rect": {
+            "X": -224,
+            "Y": 64,
+            "W": 288,
+            "H": 64
+          },
+          "collapsed": "CollapsedNone",
+          "uncollapsedSizeX": 288,
+          "uncollapsedSizeY": 64,
+          "contents": "Checkbox",
+          "properties": {
+            "checked": false,
+            "description": "Take photos of the world.",
+            "filepath": ""
+          }
+        },
+        {
+          "id": 6,
           "rect": {
             "X": -1280,
             "Y": 96,
@@ -142,7 +195,7 @@
           }
         },
         {
-          "id": 19,
+          "id": 7,
           "rect": {
             "X": -704,
             "Y": 96,
@@ -160,7 +213,7 @@
           }
         },
         {
-          "id": 41,
+          "id": 8,
           "rect": {
             "X": -1280,
             "Y": 128,
@@ -178,7 +231,25 @@
           }
         },
         {
-          "id": 21,
+          "id": 22,
+          "rect": {
+            "X": -224,
+            "Y": 128,
+            "W": 288,
+            "H": 64
+          },
+          "collapsed": "CollapsedNone",
+          "uncollapsedSizeX": 288,
+          "uncollapsedSizeY": 64,
+          "contents": "Checkbox",
+          "properties": {
+            "checked": false,
+            "description": "Hold the last photo taken in left hand",
+            "filepath": ""
+          }
+        },
+        {
+          "id": 9,
           "rect": {
             "X": -736,
             "Y": 160,
@@ -196,7 +267,7 @@
           }
         },
         {
-          "id": 7,
+          "id": 10,
           "rect": {
             "X": -1312,
             "Y": 192,
@@ -214,7 +285,7 @@
           }
         },
         {
-          "id": 23,
+          "id": 11,
           "rect": {
             "X": -736,
             "Y": 192,
@@ -232,7 +303,25 @@
           }
         },
         {
-          "id": 42,
+          "id": 24,
+          "rect": {
+            "X": -224,
+            "Y": 192,
+            "W": 288,
+            "H": 64
+          },
+          "collapsed": "CollapsedNone",
+          "uncollapsedSizeX": 288,
+          "uncollapsedSizeY": 64,
+          "contents": "Checkbox",
+          "properties": {
+            "checked": false,
+            "description": "Hold right click to scope in",
+            "filepath": ""
+          }
+        },
+        {
+          "id": 12,
           "rect": {
             "X": -1280,
             "Y": 224,
@@ -250,7 +339,7 @@
           }
         },
         {
-          "id": 25,
+          "id": 13,
           "rect": {
             "X": -736,
             "Y": 256,
@@ -268,24 +357,25 @@
           }
         },
         {
-          "id": 2,
+          "id": 27,
           "rect": {
-            "X": -256,
+            "X": -224,
             "Y": 256,
-            "W": 256,
-            "H": 32
+            "W": 288,
+            "H": 64
           },
           "collapsed": "CollapsedNone",
-          "uncollapsedSizeX": 256,
-          "uncollapsedSizeY": 32,
-          "contents": "Note",
+          "uncollapsedSizeX": 288,
+          "uncollapsedSizeY": 64,
+          "contents": "Checkbox",
           "properties": {
-            "description": "Items",
+            "checked": false,
+            "description": "Left click to take picture",
             "filepath": ""
           }
         },
         {
-          "id": 43,
+          "id": 15,
           "rect": {
             "X": -1280,
             "Y": 288,
@@ -303,7 +393,7 @@
           }
         },
         {
-          "id": 49,
+          "id": 16,
           "rect": {
             "X": -736,
             "Y": 288,
@@ -321,25 +411,7 @@
           }
         },
         {
-          "id": 4,
-          "rect": {
-            "X": -224,
-            "Y": 288,
-            "W": 288,
-            "H": 32
-          },
-          "collapsed": "CollapsedNone",
-          "uncollapsedSizeX": 288,
-          "uncollapsedSizeY": 32,
-          "contents": "Checkbox",
-          "properties": {
-            "checked": false,
-            "description": "Camera",
-            "filepath": ""
-          }
-        },
-        {
-          "id": 44,
+          "id": 18,
           "rect": {
             "X": -1280,
             "Y": 320,
@@ -357,25 +429,25 @@
           }
         },
         {
-          "id": 6,
+          "id": 29,
           "rect": {
-            "X": -192,
+            "X": -256,
             "Y": 320,
             "W": 288,
-            "H": 64
+            "H": 32
           },
           "collapsed": "CollapsedNone",
           "uncollapsedSizeX": 288,
-          "uncollapsedSizeY": 64,
+          "uncollapsedSizeY": 32,
           "contents": "Checkbox",
           "properties": {
             "checked": false,
-            "description": "Take photos of the world.",
+            "description": "Remote Control",
             "filepath": ""
           }
         },
         {
-          "id": 8,
+          "id": 20,
           "rect": {
             "X": -1312,
             "Y": 352,
@@ -393,7 +465,25 @@
           }
         },
         {
-          "id": 38,
+          "id": 30,
+          "rect": {
+            "X": -224,
+            "Y": 352,
+            "W": 288,
+            "H": 64
+          },
+          "collapsed": "CollapsedNone",
+          "uncollapsedSizeX": 288,
+          "uncollapsedSizeY": 64,
+          "contents": "Checkbox",
+          "properties": {
+            "checked": false,
+            "description": "Remake painitngs with a new seed",
+            "filepath": ""
+          }
+        },
+        {
+          "id": 21,
           "rect": {
             "X": -1312,
             "Y": 384,
@@ -411,10 +501,10 @@
           }
         },
         {
-          "id": 9,
+          "id": 31,
           "rect": {
-            "X": -192,
-            "Y": 384,
+            "X": -224,
+            "Y": 416,
             "W": 288,
             "H": 64
           },
@@ -424,12 +514,12 @@
           "contents": "Checkbox",
           "properties": {
             "checked": false,
-            "description": "Hold the last photo taken in left hand",
+            "description": "Choose the seed by pressing numbers",
             "filepath": ""
           }
         },
         {
-          "id": 39,
+          "id": 23,
           "rect": {
             "X": -1312,
             "Y": 448,
@@ -447,25 +537,7 @@
           }
         },
         {
-          "id": 11,
-          "rect": {
-            "X": -192,
-            "Y": 448,
-            "W": 288,
-            "H": 64
-          },
-          "collapsed": "CollapsedNone",
-          "uncollapsedSizeX": 288,
-          "uncollapsedSizeY": 64,
-          "contents": "Checkbox",
-          "properties": {
-            "checked": false,
-            "description": "Hold right click to scope in",
-            "filepath": ""
-          }
-        },
-        {
-          "id": 12,
+          "id": 25,
           "rect": {
             "X": -1312,
             "Y": 480,
@@ -483,7 +555,25 @@
           }
         },
         {
-          "id": 48,
+          "id": 33,
+          "rect": {
+            "X": -224,
+            "Y": 480,
+            "W": 288,
+            "H": 32
+          },
+          "collapsed": "CollapsedNone",
+          "uncollapsedSizeX": 288,
+          "uncollapsedSizeY": 32,
+          "contents": "Checkbox",
+          "properties": {
+            "checked": false,
+            "description": "Click to set seed",
+            "filepath": ""
+          }
+        },
+        {
+          "id": 26,
           "rect": {
             "X": -1312,
             "Y": 512,
@@ -501,9 +591,9 @@
           }
         },
         {
-          "id": 14,
+          "id": 35,
           "rect": {
-            "X": -192,
+            "X": -224,
             "Y": 512,
             "W": 288,
             "H": 64
@@ -514,12 +604,12 @@
           "contents": "Checkbox",
           "properties": {
             "checked": false,
-            "description": "Left click to take picture",
+            "description": "Click with no seed set to randomize",
             "filepath": ""
           }
         },
         {
-          "id": 13,
+          "id": 28,
           "rect": {
             "X": -1312,
             "Y": 544,
@@ -531,15 +621,15 @@
           "uncollapsedSizeY": 64,
           "contents": "Checkbox",
           "properties": {
-            "checked": false,
+            "checked": true,
             "description": "Lobby to Atrium connections",
             "filepath": ""
           }
         },
         {
-          "id": 16,
+          "id": 37,
           "rect": {
-            "X": -224,
+            "X": -256,
             "Y": 576,
             "W": 288,
             "H": 32
@@ -550,48 +640,30 @@
           "contents": "Checkbox",
           "properties": {
             "checked": false,
-            "description": "Remote Control",
+            "description": "Coins",
             "filepath": ""
           }
         },
         {
-          "id": 18,
+          "id": 39,
           "rect": {
-            "X": -192,
+            "X": -256,
             "Y": 608,
             "W": 288,
-            "H": 64
+            "H": 32
           },
           "collapsed": "CollapsedNone",
           "uncollapsedSizeX": 288,
-          "uncollapsedSizeY": 64,
+          "uncollapsedSizeY": 32,
           "contents": "Checkbox",
           "properties": {
             "checked": false,
-            "description": "Remake painitngs with a new seed",
+            "description": "Glasses?",
             "filepath": ""
           }
         },
         {
-          "id": 20,
-          "rect": {
-            "X": -192,
-            "Y": 672,
-            "W": 288,
-            "H": 64
-          },
-          "collapsed": "CollapsedNone",
-          "uncollapsedSizeX": 288,
-          "uncollapsedSizeY": 64,
-          "contents": "Checkbox",
-          "properties": {
-            "checked": false,
-            "description": "Choose the seed by pressing numbers",
-            "filepath": ""
-          }
-        },
-        {
-          "id": 27,
+          "id": 32,
           "rect": {
             "X": -1408,
             "Y": 736,
@@ -608,25 +680,7 @@
           }
         },
         {
-          "id": 22,
-          "rect": {
-            "X": -192,
-            "Y": 736,
-            "W": 288,
-            "H": 32
-          },
-          "collapsed": "CollapsedNone",
-          "uncollapsedSizeX": 288,
-          "uncollapsedSizeY": 32,
-          "contents": "Checkbox",
-          "properties": {
-            "checked": false,
-            "description": "Click to set seed",
-            "filepath": ""
-          }
-        },
-        {
-          "id": 29,
+          "id": 34,
           "rect": {
             "X": -1376,
             "Y": 768,
@@ -644,25 +698,7 @@
           }
         },
         {
-          "id": 24,
-          "rect": {
-            "X": -192,
-            "Y": 768,
-            "W": 288,
-            "H": 64
-          },
-          "collapsed": "CollapsedNone",
-          "uncollapsedSizeX": 288,
-          "uncollapsedSizeY": 64,
-          "contents": "Checkbox",
-          "properties": {
-            "checked": false,
-            "description": "Click with no seed set to randomize",
-            "filepath": ""
-          }
-        },
-        {
-          "id": 30,
+          "id": 36,
           "rect": {
             "X": -1376,
             "Y": 800,
@@ -680,25 +716,7 @@
           }
         },
         {
-          "id": 26,
-          "rect": {
-            "X": -224,
-            "Y": 832,
-            "W": 288,
-            "H": 32
-          },
-          "collapsed": "CollapsedNone",
-          "uncollapsedSizeX": 288,
-          "uncollapsedSizeY": 32,
-          "contents": "Checkbox",
-          "properties": {
-            "checked": false,
-            "description": "Coins",
-            "filepath": ""
-          }
-        },
-        {
-          "id": 31,
+          "id": 38,
           "rect": {
             "X": -1344,
             "Y": 864,
@@ -716,25 +734,7 @@
           }
         },
         {
-          "id": 28,
-          "rect": {
-            "X": -224,
-            "Y": 864,
-            "W": 288,
-            "H": 32
-          },
-          "collapsed": "CollapsedNone",
-          "uncollapsedSizeX": 288,
-          "uncollapsedSizeY": 32,
-          "contents": "Checkbox",
-          "properties": {
-            "checked": false,
-            "description": "Glasses?",
-            "filepath": ""
-          }
-        },
-        {
-          "id": 32,
+          "id": 40,
           "rect": {
             "X": -1344,
             "Y": 896,
@@ -752,7 +752,7 @@
           }
         },
         {
-          "id": 33,
+          "id": 41,
           "rect": {
             "X": -1376,
             "Y": 928,
@@ -770,7 +770,7 @@
           }
         },
         {
-          "id": 34,
+          "id": 42,
           "rect": {
             "X": -1376,
             "Y": 992,
@@ -788,7 +788,7 @@
           }
         },
         {
-          "id": 35,
+          "id": 43,
           "rect": {
             "X": -1344,
             "Y": 1024,
@@ -805,7 +805,7 @@
           }
         },
         {
-          "id": 36,
+          "id": 44,
           "rect": {
             "X": -1344,
             "Y": 1248,
@@ -822,7 +822,7 @@
           }
         },
         {
-          "id": 37,
+          "id": 45,
           "rect": {
             "X": -1344,
             "Y": 1344,
@@ -839,7 +839,7 @@
           }
         },
         {
-          "id": 47,
+          "id": 46,
           "rect": {
             "X": -1376,
             "Y": 1440,
@@ -857,7 +857,7 @@
           }
         },
         {
-          "id": 50,
+          "id": 47,
           "rect": {
             "X": -1376,
             "Y": 1536,
@@ -875,7 +875,7 @@
           }
         },
         {
-          "id": 51,
+          "id": 48,
           "rect": {
             "X": -1344,
             "Y": 1568,
@@ -893,7 +893,7 @@
           }
         },
         {
-          "id": 52,
+          "id": 49,
           "rect": {
             "X": -1344,
             "Y": 1600,
